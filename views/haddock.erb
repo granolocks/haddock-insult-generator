@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      <% @insults.each do |insult| %>
+        <%= insult  + " " %>
+      <% end %>
+    </title>
+  </head>
+  <body>
+    <div style="margin: 0 auto; width: 900px;">
+      <div style="float:left">
+        <img src="/captain-haddock.gif" >
+      </div>
+      <div style="float:left">
+        <% @insults.each do |insult| %>
+          <h1 style="font-family:sans-serif;"><%= insult %></h1>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>
