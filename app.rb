@@ -19,7 +19,7 @@ class Haddock
 
   private
   def self.add_line_breaks(insult)
-    if insult.length >= 35
+    if insult.length >= 25
       spaces_count = insult.scan(/\ /).count
       insult_array = insult.split(' ')
       insult_array[spaces_count/2] << "<br/>"

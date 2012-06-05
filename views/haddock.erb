@@ -2,21 +2,50 @@
 <html>
   <head>
     <title>
-      Captain Haddock Insult Generator
+      Captain Haddock Insult Generator -- 
       <% @insults.each do |insult| %>
         <%= insult  + " " %>
       <% end %>
     </title>
     <style>
+      @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
+      body { font-family: 'Shadows Into Light Two', cursive; }
       #wrapper{
         margin: 0 auto; 
         width: 900px;
-       }
-       .left{ 
-         float: left; 
-       }
-       .image { width: 40%; }
-       .image img{ width: 100%;}  
+      }
+      #footer{
+        margin: 0 auto; 
+        width: 700px;
+      }
+
+      #credits{ width: 40%; }
+
+      #credits ul li{ 
+        font-family: sans-serif;  
+      }
+
+      #refresh{
+        width: 59%;
+        text-align: center;
+        }
+      
+      a{ 
+        color: black;
+      }
+
+      a:hover{
+        text-decoration: none;
+      }
+
+
+      .left{ 
+        float: left; 
+      }
+      #insults{ margin-top: 3em; }
+      .image{ width: 50%; }
+      .image img{ width: 100%; }  
+      .clear { clear: both; }
     </style>
   </head>
   <body>
@@ -24,10 +53,24 @@
       <div class="left image">
         <img src="/captain-haddock.gif" >
       </div>
-      <div class="left quotes">
+      <div class="left" id="insults">
         <% @insults.each do |insult| %>
-          <h1 style="font-family:sans-serif;"><%= insult %></h1>
+          <h1 class="insult"><%= insult %></h1>
         <% end %>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="footer">
+      <div id="credits"class="left">
+        <ul>
+          <li><a href="http://www.tintin.com/">Tintin is owned by Herge</a></li>
+          <li><a href="http://www.tintinologist.org/guides/lists/curses.html">Captain Haddock Insults</a></li>
+          <li><a href="http://www.cmdr-fire.co.uk/haddock.html">Another Insult Generator</a></li>
+          <li><a href="mailto:info@s3ddd.info">Contact</a></li>
+        </ul>
+      </div>
+      <div id="refresh" class="left">
+        <h1><a href="/">Refresh!</a></h1>
       </div>
     </div>
   </body>
